@@ -21,23 +21,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   8 .module_info_crc 00000004  000ba5b0  000ba5b0  0002a5b0  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  9 .debug_info   00157f85  00000000  00000000  0002a5b4  2**0
+  9 .debug_info   00157f83  00000000  00000000  0002a5b4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 10 .debug_abbrev 00018234  00000000  00000000  00182539  2**0
+ 10 .debug_abbrev 00018234  00000000  00000000  00182537  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 11 .debug_loc    00045ceb  00000000  00000000  0019a76d  2**0
+ 11 .debug_loc    00045ceb  00000000  00000000  0019a76b  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 12 .debug_aranges 00003300  00000000  00000000  001e0458  2**0
+ 12 .debug_aranges 00003300  00000000  00000000  001e0456  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_ranges 0000b3a0  00000000  00000000  001e3758  2**0
+ 13 .debug_ranges 0000b3a0  00000000  00000000  001e3756  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_macro  00044bb6  00000000  00000000  001eeaf8  2**0
+ 14 .debug_macro  00044bb6  00000000  00000000  001eeaf6  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_line   00055700  00000000  00000000  002336ae  2**0
+ 15 .debug_line   000556ff  00000000  00000000  002336ac  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_str    0013b601  00000000  00000000  00288dae  2**0
+ 16 .debug_str    0013b601  00000000  00000000  00288dab  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_frame  000096b8  00000000  00000000  003c43b0  2**2
+ 17 .debug_frame  000096b8  00000000  00000000  003c43ac  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -517,7 +517,7 @@ BLYNK_WRITE(V2) {
    b4258:	d10e      	bne.n	b4278 <BlynkWidgetWrite2+0xb8>
             digitalWrite(RED_LED, HIGH);
    b425a:	2101      	movs	r1, #1
-        else if (prevOn == 'b') {
+        } else if (prevOn == 'b') {
             digitalWrite(BLUE_LED, HIGH);
             digitalWrite(RED_LED, LOW);
             digitalWrite(GREEN_LED, LOW);
@@ -539,7 +539,7 @@ BLYNK_WRITE(V2) {
             prevOn = 'g';
    b4274:	2467      	movs	r4, #103	; 0x67
    b4276:	e7ba      	b.n	b41ee <BlynkWidgetWrite2+0x2e>
-        else if (prevOn == 'g') {
+        } else if (prevOn == 'g') {
    b4278:	2c67      	cmp	r4, #103	; 0x67
    b427a:	d10d      	bne.n	b4298 <BlynkWidgetWrite2+0xd8>
             digitalWrite(GREEN_LED, HIGH);
@@ -559,7 +559,7 @@ BLYNK_WRITE(V2) {
    b4290:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
             digitalWrite(BLUE_LED, LOW);
    b4294:	f003 bf29 	b.w	b80ea <digitalWrite>
-        else if (prevOn == 'b') {
+        } else if (prevOn == 'b') {
    b4298:	2c62      	cmp	r4, #98	; 0x62
    b429a:	d10a      	bne.n	b42b2 <BlynkWidgetWrite2+0xf2>
             digitalWrite(BLUE_LED, HIGH);
@@ -12461,7 +12461,7 @@ USARTSerial& __fetch_global_Serial1()
    b90f3:	692d 006e 3031 3432 6400 7665 5000 7261     -in.1024.dev.Par
    b9103:	6974 6c63 2065 7241 6f67 006e 7562 6c69     ticle Argon.buil
    b9113:	0064 754a 206c 3420 3220 3230 2032 3132     d.Jul  4 2022 21
-   b9123:	323a 3a39 3133 0000                          :29:31...
+   b9123:	333a 3a34 3330 0000                          :34:03...
 
 000b912c <_ZL4font>:
    b912c:	0000 0000 3e00 4f5b 3e5b 6b3e 6b4f 1c3e     .....>[O[>>kOk>.

@@ -155,13 +155,11 @@ BLYNK_WRITE(V2) {
             digitalWrite(RED_LED, HIGH);
             digitalWrite(GREEN_LED, LOW);
             digitalWrite(BLUE_LED, LOW);
-        }
-        else if (prevOn == 'g') {
+        } else if (prevOn == 'g') {
             digitalWrite(GREEN_LED, HIGH);
             digitalWrite(BLUE_LED, LOW);
             digitalWrite(RED_LED, LOW);
-        }
-        else if (prevOn == 'b') {
+        } else if (prevOn == 'b') {
             digitalWrite(BLUE_LED, HIGH);
             digitalWrite(RED_LED, LOW);
             digitalWrite(GREEN_LED, LOW);
